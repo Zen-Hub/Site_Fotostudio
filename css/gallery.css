@@ -1,0 +1,123 @@
+/* GALLERY================================================================= */
+
+.header {
+
+  position: fixed;
+}
+
+.main {
+  margin-top: 80px;
+  display: grid;
+  justify-content: center;
+}
+
+
+/* Стили для основного контейнера галереи */
+.container-gallery {
+  display: grid;
+  grid-auto-flow: dense;
+  height: 100%;
+  max-width: 1920px;
+  margin-bottom: 5px;
+
+}
+
+.gallery-style {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 5px;
+
+}
+
+/* Стили для блока изображения */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Добавляем эту строку для обрезки избыточных изображений */
+  cursor: pointer;
+
+}
+
+.image-gallery img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Стили для увеличенного изображения (модального окна) */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Прозрачный черный цвет фона */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-img {
+  max-width: 90%;
+  /* Максимальная ширина изображения в модальном окне */
+  max-height: 90%;
+  /* Максимальная высота изображения в модальном окне */
+}
+
+/* Стили для курсора при наведении на изображение */
+.image img:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+/* ======MEDIA========================================================================== */
+
+/* Правила стилей для мобильных устройств (максимальная ширина 767 пикселей) */
+@media screen and (max-width: 767px) {
+
+  .gallery-style {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 81px 0 0px 0;
+
+  }
+
+}
+
+/* Правила стилей для планшетов и небольших рабочих столов (ширина от 768 пикселей до 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+  .gallery-style {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 17px 0 0px 0;
+
+  }
+}
+
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .gallery-style {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 17px 0 0px 0;
+
+  }
+
+
+}
+
+/* xl (>=1200) */
+@media (min-width: 1200px) {
+  .gallery-style {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 17px 0 0px 0;
+  }
+
+
+}

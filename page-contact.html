@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FabrikaFoto</title>
+    <meta name="theme-color" content="#c9e0e04d">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- fonts ================================================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- favicon =========================================================================== -->
+    <link rel="shortcut icon" href="/assets/img/favicons/fav.png" type="image/x-icon">
+    <!-- css =========================================================================== -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+
+
+        <header class="header">
+            <div class="container-header">
+                <a class="header__logo" href="index.html">
+                    <img src="/assets/images/logo.png" alt="Fabrika Foto" class="header__logo__img">
+                </a>
+
+
+                <!-- navigation menu======================================================= -->
+                <div class="header__menu">
+
+
+                    <div class="header__menu-item">
+                        <a href="index.html">ГЛАВНАЯ</a>
+                    </div>
+
+                    <div class="header__menu-item">
+                        <a href="page-promotion.html">АКЦИИ</a>
+                    </div>
+
+                    <div class="header__menu-item">
+                        <a href="page-gallery.html">ГАЛЕРЕЯ</a>
+                    </div>
+
+                    <div class="header__menu-item">
+                        <a href="page-products.html">НАШИ ПРОДУКТЫ</a>
+                    </div>
+
+                    <div class="header__menu-item">
+                        <a href="page-contact.html">КОНТАКТЫ</a>
+                    </div>
+
+
+                </div>
+
+                <!-- contacts ============================================= -->
+                <div class="header__contacts">
+                    <a class="btn-header" href="https://wa.me/+79774582156">Написать в WhatsApp</a>
+
+                    <div class="header__contacts-item">
+
+                        <a href="tel:+797867834358">+7(977)481 41 28</a>
+                        <a href="fabrikafoto.com" class="header__contacts-mail">fabrika-foto@ya.ru</a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <!-- MENU BURGER================================================== -->
+            <div class="header__hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Мобильное меню -->
+            <div class="header__mobile-menu">
+                <div class="header__mobile-menu-item">
+                    <a href="index.html">ГЛАВНАЯ</a>
+                </div>
+                <div class="header__mobile-menu-item">
+                    <a href="page-promotion.html">АКЦИИ</a>
+                </div>
+                <div class="header__mobile-menu-item">
+                    <a href="page-gallery.html">ГАЛЕРЕЯ</a>
+                </div>
+                <div class="header__mobile-menu-item">
+                    <a href="page-products.html">НАШИ ПРОДУКТЫ</a>
+                </div>
+                <div class="header__mobile-menu-item">
+                    <a href="page-contact.html">КОНТАКТЫ</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTACTS ======================================================= -->
+
+        <div class="main">
+
+            <div class="contacts">
+
+                <div class="contacts-container">
+                    
+                    <div class="contact-block">
+
+
+
+                        <div class="contact-phone-mail">
+
+                            <div class="title contacts__minititle">Свяжитесь с нами</div>
+
+
+                            <div class="contacts__mail">
+
+                                <a href="mailto:mirdetstva@gmail.com">fabrika-foto@ya.ru</a>
+                            </div>
+
+                            <div class="contacts__phones">
+                                <div class="contacts__phoneblock">
+                                    <a href="tel:+797867834347">+7(977)481 41 28</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="contact-adress">
+                            <div class="title contacts__minititle">Офис</div>
+                            <div class="contacts__descr">
+                                Московская обл. г.Железнодорожный<br>ш. Разинское 5<br>
+                                Деловой центр "Вешняки"<br>второй этаж
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <div class="title contacts__minititle">Напишите нам</div>
+                        <form class="contacts__feed">
+                            <div class="form-group">
+                                <label for="name">имя:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение:</label>
+                                <textarea class="message-area" id="message" name="message" required></textarea>
+
+                                <div class="success-text" id="success-message"></div>
+
+                            </div>
+                            <button type="submit">Отправить</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <script>
+                document.querySelector('.contacts__feed').addEventListener('submit', function (event) {
+                    event.preventDefault(); // Предотвращение отправки формы по умолчанию
+
+                    // Получение значений полей формы
+                    let name = document.getElementById('name').value;
+                    let email = document.getElementById('email').value;
+                    let message = document.getElementById('message').value;
+
+                    // Дополнительная обработка данных или отправка на сервер
+                    // Отправка данных на сервер
+                    // fetch('contact.php', {
+                    //     method: 'POST',
+                    //     body: JSON.stringify({
+                    //         name: name,
+                    //         email: email,
+                    //         message: message
+                    //     }),
+                    //     headers: {
+                    //         'Content-Type': 'application/json'
+                    //     }
+                    // })
+                    //     .then(response => response.text())
+                    //     .then(data => {
+                    //         let successMessage = document.getElementById('success-message');
+                    //         successMessage.textContent = data;
+
+                    //         // Дополнительные действия после успешной отправки на сервер
+                    //     })
+                    //     .catch(error => {
+                    //         console.error('Произошла ошибка:', error);
+                    //     });
+
+
+                    // Вывод сообщения об успешной отправке
+                    let successMessage = document.getElementById('success-message');
+                    successMessage.textContent = 'Спасибо! Ваше сообщение было успешно отправлено.';
+
+                    // Очистка полей формы после отправки
+                    document.getElementById('name').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('message').value = '';
+
+
+                    // Задержка в 3 секунды перед очисткой сообщения
+                    setTimeout(function () {
+                        successMessage.textContent = '';
+                    }, 3000);
+                });
+            </script>
+        </div>
+        <!-- FOOTER ========================================================================= -->
+
+
+        <div class="footer">
+            <div class="container-footer">
+
+                <a class="footer-logo" href="index.html">
+                    <img src="/assets/images/favicons/fav.png" alt="Fabrika Foto">
+                </a>
+
+
+
+                <div class="footer__contacts">
+
+
+                    <div class="footer__contacts-tel">
+
+                        <a href="tel:+797867834358">+7(977)481 41 28</a>
+
+                    </div>
+
+                    <div class="footer__contacts-mail">
+
+                        <a href="fabrikafoto.com" class="header__contacts-mail">fabrika-foto@ya.ru</a>
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <script async src="assets/js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+/* SLIDER =====================================================*/
+.slider {
+    flex: 1 0 auto;
+    box-sizing: border-box;
+    flex: 1 0 auto;
+    /*flex-контейнер*/
+    justify-content: center;
+    /*выровняли по центру*/
+    align-items: center;
+    /*Выравнивание по центру.*/
+    overflow: hidden;
+    /*Отображается только область внутри элемента*/
+    /* margin-top: 91px; */
+    width: 100vw;
+    height: 89vh;
+}
+
+.container-sliders {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    display: grid;
+    align-items: end;
+    width: 100%;
+    cursor: pointer;
+    flex: 4;
+    background-size: cover;
+    border-radius: 5px;
+    /*Масштабирует изображение с сохранением пропорций*/
+    background-position: center;
+    /*Задает начальное положение фонового изображения*/
+    background-repeat: no-repeat;
+    /*Определяет, как будет повторяться фоновое изображение*/
+    /* position: relative; */
+    /*Положение элемента устанавливается относительно его исходного места*/
+    transition: all 500ms ease-in-out;
+}
+
+.slide.active {
+    flex: 40;
+}
+
+.slide .slide-items {
+    display: grid;
+    justify-content: start;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ff5500;
+    width: 100%;
+    
+}
+
+.slide .active-text {
+    height: 40px;
+    font-weight: 600;
+    margin: 0px 0px 0px 25px;
+    /*верх право низ лево*/
+    opacity: 0;
+    transition: opacity 0.1s ease-in 0.1s;
+
+}
+
+.slide.active .active-text {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.3s;
+
+}
+
+.slide .noactive-text {
+    height: 70px;
+    width: 160px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    opacity: 1;
+    color: #f8f7f5;
+    margin: 0px 0px 0px 0px;
+    /*верх право низ лево*/
+    transition: opacity 0.3s ease-in 0.3s;
+}
+
+.slide.active .noactive-text {
+    opacity: 0;
+    transition: opacity 0.1s ease-in 0.1s;
+}
+
+/* btn slide --------------------------------------------------------------*/
+.slide-btn {
+    height: 18px;
+    max-width: 140px;
+    margin: 0px 0px 15px 25px;
+    padding: 10px;
+    opacity: 0;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    color: #f8f7f5;
+    background-color: #ff5500;
+    transition: opacity 0.2s ease-in 0.2s;
+}
+
+.slide.active .slide-btn {
+    opacity: 1;
+    transition: opacity 0.2s ease-in 0.2s;
+}
+
+.slide-btn:hover {
+    background-color: #fcfbf9;
+    color: #ff5500;
+    transition: background-color 0.1s ease-in 0.1s, color 0.1s ease-in 0.1s;
+}
+
+/* ==============MEDIA================================== */
+/* Правила стилей для мобильных устройств (максимальная ширина 767 пикселей) */
+@media screen and (max-width: 767px) {
+    .slider {
+        width: 100%;
+    }
+
+    .container-sliders {
+        display: grid;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide {
+        width: 100%;
+        
+    }
+
+    .slide.active {
+        flex: 1;
+        width: 100%;
+    }
+
+    .slide .slide-items {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .slide .active-text {
+        display: block;
+        font-size: 14px;
+        height: 30px;
+        margin: 0px 0px 5px 5px;
+        
+    }
+
+    .slide .noactive-text {
+        font-size: 18px;
+        height: 30px;
+        margin: 0px 0px 5px 5px;
+        color: #f8f7f5;
+    }
+
+
+}
+
+/* Правила стилей для планшетов и небольших рабочих столов (ширина от 768 пикселей до 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .slider {
+        width: 100%;
+    }
+
+
+    .slide .slide-items {
+        justify-content: center;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .slide .active-text {
+        display: block;
+        font-size: 16px;
+        height: 30px;
+        text-align: center;
+        margin: 0px 0px 5px 15px;
+    }
+
+    .slide .noactive-text {
+        width: 100px;
+        font-size: 16px;
+        height: 30px;
+        margin: 0px 0px 5px 5px;
+
+    }
+}
+
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .slider {
+        width: 100%;
+        display: grid;
+
+
+    }
+
+
+    .slide .slide-items {
+        justify-content: center;
+        font-size: 16px;
+        width: 100%;
+
+
+    }
+
+    .slide .active-text {
+        display: block;
+        font-size: 16px;
+        height: 30px;
+        text-align: center;
+        margin: 0;
+       
+    }
+
+    .slide .noactive-text {
+        font-size: 16px;
+        height: 30px;
+        margin: 0px auto;
+
+    }
+}
+
+/* xl (>=1200) */
+@media (min-width: 1200px)and (max-width: 1399px) {}

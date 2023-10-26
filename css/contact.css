@@ -1,0 +1,199 @@
+.contacts {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+
+.contacts-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    gap: 25%;
+    height: auto;
+    margin: 0px 0px 0px 0px;
+}
+
+.title {
+    font-size: 28px;
+    height: 30px;
+}
+
+.contact-block {
+    display: grid;
+    height: 100%;
+    margin: 0px 0px 0px 0px;
+    color: #66646e;
+    padding: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+
+.contacts__descr {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.contact-phone-mail {
+    color: #ff5500;
+    width: 100%;
+}
+
+.contacts__minititle {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px 0px 0px 0px;
+    color: #ff5500;
+}
+
+.contacts__phones {
+    margin: 15px;
+}
+
+.contacts__phoneblock {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #5D5C61;
+}
+
+.contacts__phoneblock a {
+    color: #5D5C61;
+    text-decoration: none;
+}
+
+.contacts__mail {
+    font-size: 18px;
+    margin: 15px;
+}
+
+.contacts__mail a {
+    color: #5D5C61;
+    text-decoration: none;
+}
+
+
+
+
+/* КОНТАКТНАЯ ФОРМА */
+.contact-form {
+    display: grid;
+    padding: 5px;
+    border-radius: 5px;
+    height: 100%;
+    color: #5D5C61;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.contacts__feed {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px 0px 10px 0px;
+}
+
+.contact-form .form-group {
+    margin: 15px 0px 25px 0px;
+}
+
+.contact-form label {
+    display: grid;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    margin-top: 5px;
+    width: 240px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 100px;
+    width: 240px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form button[type="submit"] {
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 180px;
+    color: #fcfbf9;
+    background-color: #ff5500;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to bottom, #ff6600, #e65c00);
+    transition: background 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #EAE7DC;
+    background: linear-gradient(to bottom, #e65c00, #ff6600);
+}
+
+input,
+textarea {
+    background: linear-gradient(to bottom, #fff, #f9f9f9);
+}
+
+.success-text {
+    height: 20px;
+    width: 100%;
+    margin: 10px;
+}
+
+/* ======MEDIA========================================================================== */
+
+/* Правила стилей для мобильных устройств (максимальная ширина 767 пикселей) */
+@media screen and (max-width: 767px) {
+
+    .contacts {
+        min-height: auto;
+        align-content: space-between;
+        margin: 26px 0px 25px 0px;
+    }
+
+    .contacts-container {
+
+        grid-auto-flow: row;
+        grid-template-columns: 100%;
+        gap: 3%;
+
+    }
+
+}
+
+/* Правила стилей для планшетов и небольших рабочих столов (ширина от 768 пикселей до 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {}
+
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+/* xl (>=1200) */
+@media (min-width: 1200px)and (max-width: 1399px) {}

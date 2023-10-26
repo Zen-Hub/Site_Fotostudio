@@ -1,0 +1,179 @@
+.header {
+
+    position: fixed;
+}
+
+.main {
+    margin-top: 62px;
+}
+
+/* ------------------------------------------------------- */
+.promotion {
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    height: 100%;
+    text-align: center;
+    margin-top: 23px;
+
+}
+
+.promotion-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    align-items: center;
+    margin: 0 20px 0 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 15px;
+
+}
+
+.promotion-photo {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin: 5px;
+    align-items: center;
+}
+
+.promotion-photo img {
+   height: auto;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: contain;
+    /* Изображение сохраняет свои пропорции и центрируется в контейнере */
+}
+
+/* -------------descriptions----------------------------- */
+.promotion-details {
+    display: grid;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+}
+
+.promotion__title {
+    color: #ff5500;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.promotion__description {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #4f5050;
+}
+
+.promotion-benefits {
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+.promotion-benefits div {
+    background: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.promotion-benefits div:first-child {
+    border: 2px solid #ff5500;
+    ;
+    font-weight: bold;
+}
+
+.promotion__conditions {
+    font-size: 16px;
+    color: #6c6d6d;
+}
+
+/* button------------------------ */
+a.btn-promotion {
+    display: grid;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    height: 18px;
+    width: 180px;
+    color: #f7f5f1;
+    background-color: #ff5500;
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+    justify-self: center;
+}
+
+a.btn-promotion:hover {
+    background-color: #EAE7DC;
+    color: #ff5500;
+}
+
+/* ======MEDIA========================================================================== */
+
+/* Правила стилей для мобильных устройств (максимальная ширина 767 пикселей) */
+@media screen and (max-width: 767px) {
+
+    .promotion {
+        margin-top: 91px;
+
+    }
+
+
+
+    .promotion-container {
+        grid-auto-flow: row;
+        grid-template-columns: 100%;
+        margin: 5px 0px 0px 0px;
+    }
+
+}
+/* Правила стилей для планшетов и небольших рабочих столов (ширина от 768 пикселей до 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .promotion {
+        margin-top: 22px;
+    }
+
+    .promotion-container {
+        grid-auto-flow: row;
+        grid-template-columns: 100%;
+    }
+
+}
+
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+    .promotion {
+        margin-top: 22px;
+    }
+
+    .promotion-container {
+        grid-auto-flow: row;
+        
+    }
+
+
+}
+
+/* xl (>=1200) */
+@media (min-width: 1200px)and (max-width: 1399px) {
+
+    .promotion {
+        margin-top: 22px;
+    }
+
+    .promotion-container {
+        grid-auto-flow: row;
+    }
+
+}

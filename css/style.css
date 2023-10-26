@@ -1,0 +1,484 @@
+/* отключили видимость капчи*/
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+/* body ==================================*/
+
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    scroll-behavior: smooth; /*плавная прокрутка*/
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.main {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+p {
+    padding: 0;
+    margin: 0;
+
+}
+
+a {
+    text-decoration: none;
+    color: #EAE7DC;
+}
+
+/* HEADER ====================================================================*/
+
+
+.header {
+    display: grid;
+    /* position: fixed; */
+    background-color: #fcfcfc;
+    height: 90px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    font-size: 22px;
+}
+
+.container-header {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+}
+
+a.header__logo {
+    max-width: 110px;
+    height: 100%;
+    margin-left: 10px;
+
+}
+
+.header__logo img {
+    max-width: 110px;
+    object-fit: contain
+        /* подогнать размер фото под контейнер */
+}
+
+
+/* menu navigation =================================================== */
+
+.header__menu {
+    display: grid;
+    grid-auto-flow: column;
+
+
+
+}
+
+.header__menu-item {
+    text-align: center;
+
+}
+
+.header__menu-item a {
+    border: none;
+    color: #747474;
+    padding: 0px 2px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+
+
+}
+
+.header__menu-item a:hover {
+
+    color: #ff5500;
+}
+
+.header__menu-item a.active {
+
+    color: #ff5500;
+}
+
+/* CONTACTS =================================== */
+
+.header__contacts {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 16px;
+    margin-right: 10px;
+
+}
+
+.header__contacts-item {
+    display: block;
+    margin: 5px;
+    color: #ff5500;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+
+
+.header__contacts-item a {
+    display: block;
+    margin: 5px;
+    color: #ff5500;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+
+/* BUTTON HEADER------------------------------------------------*/
+.btn-header {
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    height: 18px;
+    width: 180px;
+    color: #fcfbf9;
+    background-color: #ff5500;
+    margin-right: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* FOOTER =====================================================*/
+.footer {
+    display: flex;
+    
+    width: 100%;
+    background-color: #ff5500;
+    color: #fff;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    width: 100%;
+}
+
+.footer-logo img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    margin: 0px 0px 0px 10px;
+}
+
+.footer__contacts {
+    display: grid;
+    align-content: space-evenly;
+    margin: 0px 0px 0px 0px;
+}
+
+/* ---------BURGER------------- */
+.header__hamburger {
+    opacity: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.header__hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+
+.header__mobile-menu {
+    opacity: 0;
+    width: 160px;
+    margin: 0px 0px 0px 10px;
+    background-color: #fcfcfc;
+    transition: opacity 0.1s ease-in-out;
+   
+}
+
+.header__mobile-menu-item {
+
+    margin-top: 10px;
+}
+
+.header__mobile-menu-item a {
+    color: #747474;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+
+.header__mobile-menu-item a.active {
+    color: #ff5500;
+}
+
+
+/* ======MEDIA========================================================================== */
+
+/* Правила стилей для мобильных устройств (максимальная ширина 767 пикселей) */
+@media screen and (max-width: 767px) {
+  
+
+    /* burger======================= */
+    .header__menu {
+        display: none;
+    }
+
+    .header__hamburger {
+        opacity: 1;
+        display: flex;
+    }
+
+    .header__mobile-menu.show {
+        opacity: 1;
+        display: block;
+        transition: opacity 0.9s ease-in-out;
+        
+
+    }
+
+    /* menu======================== */
+
+    .header {
+        display: grid;
+        height: 160px;
+        transition: height 350ms ease;
+        /* Добавляем анимацию изменения высоты */
+    }
+
+    a.header__logo {
+        
+        margin: 0;
+    }
+
+    .header__logo img {
+        max-width: 90px;
+        max-height: 80px;
+        
+    }
+
+    .header.showHeader {
+        height: 400px;
+        transition: height 350ms ease;
+        /* Добавляем анимацию изменения высоты */
+    }
+
+    .container-header {
+        margin: 5px 0px;
+        
+    }
+
+    .header__contacts {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 10px;
+        font-size: 16px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .btn-header {
+        width: 160px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .header__contacts-item {
+        display: grid;
+        justify-content: center;
+        margin: 0;
+        gap: 10%;
+    }
+
+    .header__contacts-item a {
+        margin: 5px 0px 0px 0px;
+    }
+
+
+
+    .footer {
+
+        width: 100%;
+        
+    }
+
+    .container-footer {
+        display: flex;
+        align-items: center;
+        height: auto;
+        margin: 5px 15px 5px 15px;
+    }
+
+    .footer-logo img {
+        max-width: 60px;
+        margin: 0;
+    }
+
+    .footer__contacts {
+        display: grid;
+        align-content: space-evenly;
+        height: 100%;
+    }
+
+}
+
+/* Правила стилей для планшетов и небольших рабочих столов (ширина от 768 пикселей до 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    /* header media */
+    .container-header {
+        margin: 0px 0px 5px 0px;
+    }
+
+    a.header__logo {
+        max-width: 80px;
+        height: 70px;
+        margin: 0;
+    }
+
+    .header__logo img {
+        max-width: 80px;
+        max-height: 70px;
+        margin-left: 10px;
+    }
+
+    .header__menu {
+
+        grid-gap: 5px;
+        list-style: none;
+        padding: 0;
+    }
+
+    /* contacts media----------- */
+    .header__contacts {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 2px;
+        min-width: 110px;
+        font-size: 16px;
+        margin: 5px 5px 0px 0px;
+    }
+
+
+
+    .header__contacts-item {
+        display: grid;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .header__contacts-item a {
+        margin: 5px 0px 0px 0px;
+    }
+
+    .btn-header {
+        font-size: 12px;
+        height: 18px;
+        width: 140px;
+        margin-right: 0px;
+        text-align: center;
+        padding-bottom: 4px;
+    }
+
+    .header__mobile-menu {
+        display: none;
+    }
+}
+
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {
+   
+
+
+    a.header__logo {
+        max-width: 80px;
+        height: 70px;
+        margin: 0;
+    }
+
+    .header__logo img {
+        max-width: 90px;
+        max-height: 80px;
+        margin-left: 10px;
+
+    }
+
+    .header__menu {
+
+        grid-gap: 5px;
+        list-style: none;
+        padding: 0;
+    }
+
+    /* contacts media----------- */
+    .header__contacts {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 10px;
+        min-width: 140px;
+        height: 100%;
+        font-size: 16px;
+    }
+
+
+
+    .header__contacts-item {
+        display: grid;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .header__contacts-item a {
+        margin: 5px 0px 0px 0px;
+    }
+
+    .btn-header {
+
+        height: 18px;
+        width: 160px;
+        margin-right: 0px;
+        text-align: center;
+
+    }
+
+    .header__mobile-menu {
+        display: none;
+    }
+}
+
+/* xl (>=1200) */
+@media (min-width: 1200px)and (max-width: 1399px) {}
